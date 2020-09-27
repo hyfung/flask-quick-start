@@ -5,8 +5,9 @@ Simple flask app
 ```
 Placeholder
 ```
+# Deployment Options
 
-# Deploy using Apache2
+## Deploy using Apache2
 Install libapache2-mod-wsgi-py3
 ```
 sudo apt-get install apache2
@@ -50,13 +51,24 @@ Modify /etc/apache2/000-default.conf
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-# Deploy using uWSGI
+## Deploy using uWSGI
 ```
 Placeholder
 ```
 
-# Deploy using Docker
+## Deploy using Gnicorn
+CD to the directory with app/ and run the following command
+```
+gunicorn3 app:app
+```
+
+## Deploy using Docker
 To create a docker image, do the followings
 ```
-sudo docker build --tag YOUR_NAME:flask_app .
+sudo docker build --tag local:flask_app .
+```
+
+To run the app, do the followings
+```
+sudo docker container run -d --network host --name flask_app local:flask_app
 ```
