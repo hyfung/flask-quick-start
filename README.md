@@ -25,7 +25,7 @@ from app import app as application
 application.secret_key="YOUR_SECRET_KEY"
 ```
 
-Modify /etc/apache2/000-default.conf
+Modify /etc/apache2/sites-available/flask_app.conf
 ```
 <VirtualHost *:80>
 	#ServerName www.example.com
@@ -49,6 +49,12 @@ Modify /etc/apache2/000-default.conf
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+```
+
+Enable the site
+```
+sudo a2ensite flask_app
+sudo service apache2 restart
 ```
 
 ## Deploy using uWSGI
