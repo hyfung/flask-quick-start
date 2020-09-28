@@ -3,7 +3,8 @@ Simple flask app
 
 # Setup Procedures
 ```
-Placeholder
+pip3 install flask
+pip3 install venv #If you need venv
 ```
 # Deployment Options
 
