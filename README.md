@@ -79,3 +79,7 @@ To run the app, do the followings
 ```
 sudo docker container run -d --network host --name flask_app local:flask_app
 ```
+
+
+## Sample App: QR Code Generator Page
+![alt text](https://github.com/hyfung/flask-quick-start/blob/master/images/qr_code.png "")
